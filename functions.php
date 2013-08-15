@@ -30,9 +30,26 @@ function ectopudding_theme_setup()
     // get the theme prefix
     $prefix = hybrid_get_prefix();
 
+    // register and enqueue needed styles
+    add_action('wp_enqueue_scripts', 'ectopudding_enqueue_styles');
+
     // example action
     // add_action( "{$prefix}_header", 'ectopudding_example_action' );
 
     // example filter
     // add_filter( "{$prefix}_site_title", 'ectopudding_example_filter' );
+}
+
+/**
+ * Enqueue needed styles for the current theme.
+ *
+ * @since 0.1.1
+ */
+function ectopudding_enqueue_styles()
+{
+    // enqueue needed styles
+    wp_enqueue_style(
+        'chunkfive-webfont',
+        trailingslashit(get_stylesheet_directory_uri()) . 'css/chunkfive-webfont.css'
+    );
 }
