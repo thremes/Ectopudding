@@ -1,0 +1,1302 @@
+/*
+	Theme Name: Ectopudding
+	Theme URI: https://github.com/trsenna/ectopudding
+	Description: Just one more child theme for the Retro-Fitted parent theme. Fun and perfect for bloggers like it's parent.
+
+	Author: Thiago Senna
+	Author URI: http://www.thremes.com.br/
+	Version: 0.1
+
+	Tags: black, gray, white, one-column, two-columns, three-columns, sticky-post, theme-options, threaded-comments, translation-ready
+
+
+	Template: retro-fitted
+
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+/* 25px reset. */
+@import "../retro-fitted/library/css/25px.min.css";
+    /* Galleries. */
+@import "../retro-fitted/library/css/gallery.min.css";
+    /* Drop-downs. */
+@import "../retro-fitted/library/css/drop-downs.min.css";
+
+/* Custom font for headers. */
+
+@font-face {
+    font-family: 'ChunkFiveRoman';
+    src: url('../retro-fitted/fonts/chunkfive-webfont.eot');
+    src: local('?'), url('../retro-fitted/fonts/chunkfive-webfont.woff') format('woff'), url('../retro-fitted/fonts/chunkfive-webfont.ttf') format('truetype'), url('../retro-fitted/fonts/chunkfive-webfont.svg#webfontEUvSma4K') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+* Elements
+**************************************/
+
+/* Links */
+
+a,
+a code {
+    color: #333
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+/* Headers */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #666;
+    font-weight: normal;
+    font-family: ChunkFiveRoman, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2 {
+    font-size: 24px
+}
+
+h3 {
+    font-size: 22px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+/* Lists */
+
+ul {
+    list-style: square;
+}
+
+/* Definition lists. */
+
+dl {
+    margin: 0 0 25px 0
+}
+
+dl dt {
+    margin: 0;
+    font: normal normal bold 15px/25px Arial, Verdana, sans-serif;
+}
+
+dl dd {
+    margin: 0 0 5px 10px;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* Blockquotes */
+
+blockquote {
+    overflow: hidden;
+    margin: 0 0 25px 0;
+    padding: 25px 25px 0 25px;
+    font: normal normal bold 13px/25px Arial, Verdana, sans-serif;
+    color: #999;
+    border: 1px dotted #ddd;
+}
+
+blockquote cite {
+    color: #666;
+}
+
+blockquote a {
+    text-decoration: underline
+}
+
+blockquote a:hover {
+    text-decoration: none
+}
+
+blockquote strong {
+    font-weight: normal
+}
+
+/* Horizontal rule */
+
+hr {
+    height: 1px;
+    background: #ddd;
+}
+
+/* Tables */
+
+table {
+    margin: 0 0 25px 0;
+    width: 100%;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+table caption {
+    font: normal normal normal 13px/25px Arial, Verdana, sans-serif;
+    color: #333;
+}
+
+table th {
+    font: normal normal bold 13px/25px Arial, Verdana, sans-serif;
+    padding: 4px 2%;
+    color: #333;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: left;
+}
+
+td {
+    padding: 4px 2%;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+table a {
+    text-decoration: underline
+}
+
+/* widget calendar <table> */
+
+.widget-calendar td,
+.widget-calendar th {
+    text-align: center;
+}
+
+/* Acronyms and abbreviations */
+
+acronym,
+abbr {
+    border-bottom: 1px dotted #ddd
+}
+
+/* Code */
+
+code {
+    color: #333;
+    background: #eee;
+}
+
+pre {
+    padding: 20px;
+    color: #333;
+    background: #eee;
+    border: 1px dotted #ddd;
+}
+
+pre code {
+    color: #666
+}
+
+/* Forms */
+
+form label {
+    font: normal normal normal 13px/25px Arial, Verdana, sans-serif;
+    color: #999;
+}
+
+input[type="text"] {
+    display: block;
+    width: 50%;
+}
+
+input[type="submit"] {
+    cursor: pointer
+}
+
+textarea {
+    width: 98.5%
+}
+
+/**
+* Images
+**************************************/
+
+img {
+    max-width: 100%;
+}
+
+/* Images in post content. */
+
+.hentry img,
+.gallery img {
+    max-width: 570px;
+    height: auto;
+    padding: 4px;
+    background: #eee;
+    border: 1px solid #ddd;
+}
+
+.layout-3c-l .entry-content img,
+.layout-3c-r .entry-content img,
+.layout-3c-c .entry-content img {
+    max-width: 460px
+}
+
+.layout-1c .entry-content img {
+    max-width: 920px
+}
+
+/* Thumbnails */
+
+.thumbnail {
+    float: left;
+    width: 125px;
+    margin: 0 15px 5px 0;
+    padding: 4px;
+    background: #eee;
+    border: 1px solid #ddd;
+}
+
+/* Smiley */
+
+img.wp-smiley {
+    max-width: 12px;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+/* Captions [caption] */
+
+.wp-caption {
+    overflow: hidden;
+    max-width: 568px;
+    padding: 9px 4px;
+    background: #eee;
+    border: 1px dotted #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.layout-3c-l .wp-caption,
+.layout-3c-r .wp-caption,
+.layout-3c-c .wp-caption {
+    max-width: 460px
+}
+
+.layout-1c .wp-caption {
+    max-width: 918px
+}
+
+.wp-caption img {
+    max-width: 552px;
+    margin: 0 0 5px 0;
+    padding: 2px;
+    background: #eee;
+    border: 1px solid #eee;
+}
+
+.layout-3c-l .wp-caption img,
+.layout-3c-r .wp-caption img,
+.layout-3c-c .wp-caption img {
+    max-width: 444px
+}
+
+.layout-1c .wp-caption img {
+    max-width: 902px
+}
+
+.wp-caption .wp-caption-text {
+    margin: 0 4px;
+    font: normal normal normal 12px/12px Arial, Verdana, sans-serif;
+    color: #999;
+    text-align: right;
+}
+
+/* Galleries [gallery] */
+
+.gallery {
+    margin-bottom: 15px
+}
+
+.gallery img {
+    margin-bottom: 0
+}
+
+.gallery .gallery-item {
+    margin-bottom: 5px
+}
+
+.gallery-caption {
+    font: normal normal normal 13px/25px Arial, Verdana, sans-serif;
+    color: #999;
+}
+
+.singular-attachment .hentry .gallery-caption,
+.singular-attachment .attachment-meta .gallery-caption {
+    display: none; /* Hide captions in gallery on attachment pages . This is a theme feature. */
+}
+
+/**
+* Header
+**************************************/
+
+#header {
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+    padding: 20px 0;
+    background: #ddd;
+}
+
+#header .wrap {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#branding {
+    width: 350px
+}
+
+/* Site title */
+
+#site-title {
+    position: relative;
+    z-index: 99;
+    margin: 0 0 5px 0;
+    letter-spacing: 1px;
+    font: normal normal normal 36px/36px ChunkFiveRoman, Georgia, Times, 'Times New Roman', serif;
+}
+
+#site-title a,
+#site-title a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Site description */
+
+#site-description {
+    position: relative;
+    z-index: 99;
+    margin: 0;
+    font: italic normal normal 15px/25px Georgia, Times, 'Times New Roman', serif;
+    color: #666;
+}
+
+/**
+* Primary menu
+**************************************/
+
+#menu-primary {
+    position: relative;
+    width: 980px;
+    height: 38px;
+    margin: -75px auto 43px auto;
+}
+
+#menu-primary ul {
+    float: right
+}
+
+#menu-primary li {
+    padding: 0;
+    background: transparent;
+}
+
+#menu-primary li li {
+    margin-left: 0
+}
+
+#menu-primary li a {
+    padding: 10px 20px;
+    font: normal normal bold 12px/14px Arial, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+#menu-primary li a:hover,
+#menu-primary li.sfHover a,
+#menu-primary li.current-menu-item a,
+#menu-primary li li.current-menu-item li a {
+    text-decoration: none;
+}
+
+#menu-primary li ul {
+    background: #333;
+    border-top: 1px dotted #333;
+}
+
+#menu-primary li li a {
+    font: normal normal normal 12px/14px Arial, Verdana, sans-serif;
+    text-transform: none;
+    color: #999;
+    background: #474747;
+    border-bottom: 1px dotted #333;
+}
+
+#menu-primary li li a:hover,
+#menu-primary li li.current-menu-item a:hover {
+    color: #ddd;
+    background: #333
+}
+
+#menu-primary li li.current-menu-item a {
+    color: #ddd;
+    background: #333
+}
+
+/* Drop-down styles */
+
+#menu-primary li:hover ul,
+#menu-primary li.sfHover ul {
+    top: 34px
+}
+
+#menu-primary li:hover li ul,
+#menu-primary li.sfHover li ul {
+    top: -999em
+}
+
+#menu-primary li li:hover ul,
+#menu-primary li li.sfHover ul {
+    top: -1px;
+    margin-left: 0;
+}
+
+/**
+* Breadrumbs
+**************************************/
+
+.breadcrumbs {
+    width: 980px;
+    margin: 6px auto 25px auto;
+    font-size: 13px;
+    line-height: 13px;
+    color: #999;
+
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.breadcrumbs a {
+    color: #666
+}
+
+.breadcrumbs .trail-before {
+    margin-right: 3px
+}
+
+.breadcrumbs .sep {
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.breadcrumbs .trail-end {
+    font-style: italic
+}
+
+/**
+* Content
+**************************************/
+
+#content {
+    overflow: hidden;
+    background: #fff;
+
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* Post container */
+
+.hentry {
+    position: relative;
+    margin: 0 0 25px 0;
+    padding: 20px 20px 0 20px;
+    border: 5px solid transparent;
+}
+
+/* Sticky posts */
+
+.sticky {
+    border: 5px solid #333;
+    -moz-box-shadow: 3px 5px 5px #999;
+    -webkit-box-shadow: 3px 5px 5px #999;
+    box-shadow: 3px 5px 5px #999;
+}
+
+/* Post title */
+
+.entry-title {
+    font: normal normal normal 20px/25px ChunkFiveRoman, Georgia, Times, 'Times New Roman', serif;
+    margin: 0 0 5px 0;
+}
+
+.singular .entry-title,
+.error-404 .entry-title {
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.singular-post .entry-title {
+    margin-bottom: 5px
+}
+
+.entry-title a {
+    color: #333
+}
+
+/* Post byline */
+
+.byline {
+    margin: 0 0 5px 0;
+    font: normal normal normal 12px/25px Arial, Verdana, sans-serif;
+    color: #999;
+}
+
+.singular .byline {
+    margin: 0 0 25px 0
+}
+
+.byline a {
+    color: #666;
+    border-bottom: 1px solid #ddd;
+}
+
+.byline a:hover {
+    border-bottom: 1px solid #999;
+    text-decoration: none;
+}
+
+.byline abbr {
+    border: none
+}
+
+/* Post excerpts */
+
+.entry-summary p {
+    margin: 0 0 10px 0
+}
+
+.search .entry-summary p {
+    margin: 0 0 5px 0
+}
+
+/* Post metadata */
+
+.entry-meta {
+    clear: both;
+    margin: 0 0 20px 0;
+    font: normal normal normal 12px/25px Arial, Verdana, sans-serif;
+    color: #999;
+}
+
+.entry-meta a {
+    color: #666;
+    border-bottom: 1px solid #ddd;
+}
+
+.entry-meta a:hover {
+    border-bottom: 1px solid #999;
+    text-decoration: none;
+}
+
+/* Image meta */
+
+.attachment-meta {
+    overflow: hidden;
+    margin: 0 0 25px 0;
+    padding: 20px 20px 0 20px;
+    border: 5px solid #333;
+    -moz-box-shadow: 3px 5px 5px #999;
+    -webkit-box-shadow: 3px 5px 5px #999;
+    box-shadow: 3px 5px 5px #999;
+}
+
+.attachment-meta .image-gallery {
+    width: 60%;
+    float: right;
+}
+
+.attachment-meta .image-info {
+    width: 33%;
+    float: left;
+}
+
+.attachment-meta .image-info li {
+    font-size: 14px;
+    font-style: italic;
+    color: #999;
+}
+
+.image-info .prep {
+    font: normal normal bold 14px Arial, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.image-info .image-data {
+    float: right;
+    text-align: right;
+}
+
+/**
+* Loop elements
+**************************************/
+
+/* Loop meta */
+
+.loop-meta {
+    overflow: hidden;
+    margin: 0 0 25px 0;
+    padding: 20px 20px 0 20px;
+    border: 5px solid #333;
+    -moz-box-shadow: 3px 5px 5px #999;
+    -webkit-box-shadow: 3px 5px 5px #999;
+    box-shadow: 3px 5px 5px #999;
+}
+
+/* Loop title */
+
+.loop-title {
+    color: #333;
+    margin-bottom: 20px;
+    font: normal normal normal 20px/25px ChunkFiveRoman, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Loop description */
+
+.loop-description {
+    font-style: italic;
+    font-size: 15px;
+    color: #999;
+}
+
+.loop-description p {
+    margin-bottom: 20px
+}
+
+.loop-description em {
+    font-style: normal
+}
+
+.loop-description .avatar {
+    float: right;
+    width: 60px;
+    height: 60px;
+    margin: 0 0 10px 15px;
+    padding: 4px;
+    background: #eee;
+    border: 1px solid #ddd;
+}
+
+/**
+* Pagination and prev/next links
+**************************************/
+
+.pagination,
+.page-links,
+.comment-pagination {
+    overflow: hidden;
+    clear: both;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 13px;
+    margin: 0 0 25px 0;
+}
+
+.pagination {
+    /* Leave room for box-shadow on page numbers. */
+    margin: 0 25px 23px 25px;
+    padding-bottom: 2px;
+}
+
+.page-links {
+    padding: 7px 0 0 0
+}
+
+.pagination .page-numbers {
+    float: left;
+    display: inline-block;
+    margin: 0 15px 0 0px;
+    padding: 11px 15px;
+    font-weight: bold;
+    color: #333;
+    background: #ddd;
+    -moz-box-shadow: 2px 2px 5px #999;
+    -webkit-box-shadow: 2px 2px 5px #999;
+    box-shadow: 2px 2px 5px #999;
+}
+
+.page-links a {
+    float: none;
+    margin: 0 7px;
+    padding: 8px 12px;
+    display: inline-block;
+    font-weight: bold;
+    color: #333;
+    background: #ddd;
+}
+
+.entry-summary .page-links a {
+    margin: 0 4px;
+    padding: 5px 9px;
+}
+
+.pagination a:hover,
+.page-links a:hover {
+    color: #ddd;
+    background: #333;
+    text-decoration: none;
+}
+
+.pagination .current {
+    color: #ddd;
+    background: #333
+}
+
+.loop-nav {
+    overflow: hidden;
+    margin: 0 25px 23px 25px;
+    padding: 0 2px 2px 0; /* Leave room for box-shadow on prev / next. */
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 13px;
+}
+
+.loop-nav .previous,
+.loop-nav .next {
+    float: left;
+    margin: 0;
+    padding: 11px 15px;
+    font-weight: bold;
+    color: #333;
+    background: #ddd;
+    -moz-box-shadow: 2px 2px 5px #999;
+    -webkit-box-shadow: 2px 2px 5px #999;
+    box-shadow: 2px 2px 5px #999;
+}
+
+.loop-nav .next {
+    float: right;
+    text-align: right;
+}
+
+.loop-nav a:hover span {
+    color: #ddd;
+    background: #333
+}
+
+/**
+* Sidebars and widgets
+**************************************/
+
+/* Primary and Secondary sidebar */
+
+#sidebar-primary,
+#sidebar-secondary {
+    font-size: 15px;
+    background-color: #fff;
+}
+
+/* Widgets */
+
+.widget {
+    margin: 0 0 25px 0;
+    padding: 20px 20px 0 20px;
+    color: #666;
+}
+
+/* Widget titles */
+
+.widget-title {
+    font-size: 21px
+}
+
+#sidebar-primary .widget-title,
+#sidebar-secondary .widget-title {
+    font-size: 18px
+}
+
+/* Search widget */
+
+.widget-search {
+    padding: 25px !important;
+    background: #333 !important;
+    border: none !important;
+}
+
+.widget-search .widget-title {
+    color: #ddd
+}
+
+.widget-search form {
+    overflow: hidden
+}
+
+.widget-search input[type="text"] {
+    display: block;
+    width: 97%;
+    padding: 5px 0 5px 0.7em;
+    font-style: italic;
+    font-size: 13px;
+    color: #999;
+    background: #fff;
+    border: none;
+}
+
+.widget-search input[type="submit"],
+.widget-search label {
+    display: none
+}
+
+.error-404 .hentry .search-form {
+    margin-bottom: 25px
+}
+
+/**
+* Comments
+**************************************/
+
+#comments-number {
+    margin: 0 0 25px 0;
+    padding: 20px;
+    border: 5px solid #333;
+    -moz-box-shadow: 3px 5px 5px #999;
+    -webkit-box-shadow: 3px 5px 5px #999;
+    box-shadow: 3px 5px 5px #999;
+}
+
+/* Comment pagination */
+.comments-nav {
+    float: right;
+    position: relative;
+    line-height: 29px;
+    margin: -80px 25px 10px 0;
+}
+
+.comments-nav .page-numbers {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.comments-nav .prev, .comments-nav .next {
+    background: url('../retro-fitted/images/comments-nav.png') 0 0 no-repeat;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    height: 29px;
+    width: 29px;
+    text-indent: -9999px;
+}
+
+.comments-nav .next {
+    background-position: 0 -29px
+}
+
+/* Comment list. */
+
+.comment-list,
+.comment-list ol.children {
+    list-style: none;
+    margin: 0;
+}
+
+.comment-list li.comment,
+.comment-list li.pingback,
+.comment-list li.trackback {
+    overflow: hidden;
+    margin: 0 0 25px 0;
+    padding: 20px 20px 0 20px;
+    color: #555;
+    border-bottom: 1px dotted #ddd;
+}
+
+.comment-list li li.comment,
+.comment-list li li li li li li li.comment {
+    border: 1px dotted #ddd;
+    border-left: 5px solid #333;
+}
+
+.comment-list li li li.comment,
+.comment-list li li li li li li li li.comment {
+    border: 1px dotted #ddd;
+    border-left: 5px solid #ddd;
+}
+
+.comment-list li li li li.comment,
+.comment-list li li li li li li li li li.comment {
+    border: 1px dotted #ddd;
+    border-left: 5px solid #666;
+}
+
+.comment-list li li li li li.comment,
+.comment-list li li li li li li li li li li.comment {
+    border: 1px dotted #ddd;
+    border-left: 5px solid #ddd;
+}
+
+.comment-list li li li li li li.comment,
+.comment-list li li li li li li li li li li li.comment {
+    border: 1px dotted #ddd;
+    border-left: 5px solid #666;
+}
+
+/* WP.org theme repo compatibility */
+
+.bypostauthor {
+}
+
+/* Comment avatars */
+
+.comment-list .avatar {
+    float: left;
+    width: 46px;
+    height: 46px;
+    margin: 0 15px 10px 0;
+    padding: 2px;
+    background: #eee;
+    border: 2px solid #ddd;
+}
+
+/* Comment metadata */
+
+.comment-meta {
+    margin: 0 0 10px 0;
+    font: normal normal normal 12px/25px Arial, Verdana, sans-serif;
+    color: #999;
+}
+
+.comment-meta a {
+    color: #666;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-meta a:hover {
+    border-bottom: 1px solid #999;
+    text-decoration: none;
+}
+
+/* Comment author */
+
+.comment-author {
+    display: block;
+    color: #666;
+    font: normal normal bold 16px/25px Georgia, Times, 'Times New Roman', serif;
+}
+
+.comment-author cite {
+    font-style: normal
+}
+
+/* Comment reply link */
+
+a.comment-reply-link {
+    font-weight: bold;
+    color: #333;
+    border-bottom: none;
+}
+
+a.comment-reply-link:hover {
+    color: #fff;
+    background: #333;
+}
+
+/* Comment published date/time */
+
+.comment-meta abbr {
+    border: none
+}
+
+/* Comment text */
+
+.comment-text {
+    clear: left
+}
+
+/* Comments closed. */
+
+.comments-closed {
+    margin: 0 0 25px 0;
+    padding: 20px;
+    color: #999;
+    border: 5px solid transparent;
+}
+
+/**
+* Comment form
+**************************************/
+
+/* Comment form wrapper */
+
+#respond {
+    overflow: hidden;
+    margin: 0 0 25px 0;
+    padding: 20px 20px 0 20px;
+    color: #555;
+    border: 5px solid transparent;
+}
+
+.comment-list #respond {
+    margin-top: 25px
+}
+
+/* Logged-in text */
+
+#respond .log-in-out {
+    font-size: 15px;
+    color: #999;
+}
+
+#respond .log-in-out a {
+    font-style: italic
+}
+
+/* Cancel reply link */
+
+#reply-title small a {
+    font: italic normal normal 14px/25px Georgia, Times, 'Times New Roman', serif
+}
+
+/* Comment form paragraphs */
+
+#respond p.form-author {
+    float: left;
+    width: 50%;
+}
+
+#respond p.form-email {
+    overflow: hidden;
+    float: right;
+    width: 50%;
+}
+
+#respond p.form-url {
+    clear: both
+}
+
+/* Comment form labels */
+
+#respond label {
+    font: normal normal normal 13px/25px Arial, Verdana, sans-serif;
+    color: #999;
+}
+
+#respond p.form-email label {
+    padding: 0 9px
+}
+
+#respond span.required {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Comment form inputs and textarea elements */
+
+#respond input[type="text"],
+#respond textarea {
+    display: block;
+    width: 98.5%;
+    font: normal normal bold 15px/20px Arial, Verdana, sans-serif;
+    color: #999;
+    background: #eee;
+    border: 1px dotted #ddd;
+    border-left: 2px solid #ddd;
+}
+
+#respond p.form-author input[type="text"] {
+    width: 90%
+}
+
+#respond p.form-email input[type="text"],
+#respond p.form-email label {
+    width: 90%;
+    float: right;
+}
+
+#respond p.req input[type="text"] {
+    border-left: 2px solid #666;
+}
+
+/* Submit button */
+
+#respond #submit {
+    float: right;
+    margin-bottom: 25px;
+    padding: 11px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    background: #ddd;
+    border: none;
+}
+
+#respond #submit:hover {
+    color: #ddd;
+    background: #333
+}
+
+/**
+* Footer
+**************************************/
+
+/* Main footer container */
+
+#footer {
+    clear: both;
+    overflow: hidden;
+    width: 100%;
+    height: 26px;
+    padding: 37px 0;
+    background: #333;
+}
+
+/* Inside footer container */
+
+#footer .wrap {
+    width: 980px;
+    margin: 0 auto;
+    color: #999;
+}
+
+#footer .wrap a {
+    color: #ddd;
+    font-family: ChunkFiveRoman
+}
+
+#footer .wrap a:hover {
+    color: #999;
+}
+
+/* Copyright and credit sections */
+
+#footer .copyright, #footer .credit {
+    float: left;
+    width: 50%;
+}
+
+#footer .credit {
+    text-align: right
+}
+
+/**
+* Layouts and site structure
+**************************************/
+
+/* Body of the page */
+
+body {
+    padding: 0;
+    color: #666;
+    background: #f5f5f5;
+}
+
+/* Content and primary/secondary sidebar wrapper */
+
+#main {
+    overflow: hidden;
+    width: 980px;
+    margin: 0 auto 35px;
+}
+
+/* One column layout */
+
+.layout-1c #content {
+    width: 980px
+}
+
+/* Two columns, content left and default layouts */
+
+.layout-2c-l #content,
+.layout-default #content {
+    float: left;
+    width: 630px;
+}
+
+.layout-2c-l #sidebar-primary,
+.layout-default #sidebar-primary {
+    float: right;
+    width: 325px;
+}
+
+.layout-2c-l #sidebar-secondary,
+.layout-default #sidebar-secondary {
+    clear: right;
+    float: right;
+    width: 325px;
+}
+
+/* Two columns, content right layout */
+
+.layout-2c-r #content {
+    float: right;
+    width: 630px;
+}
+
+.layout-2c-r #sidebar-primary {
+    float: left;
+    width: 325px;
+}
+
+.layout-2c-r #sidebar-secondary {
+    float: left;
+    clear: left;
+    width: 325px;
+}
+
+/* Three columns, content left layout */
+
+.layout-3c-l #content {
+    float: left;
+    width: 520px;
+}
+
+.layout-3c-l #sidebar-primary,
+.layout-3c-l #sidebar-secondary {
+    clear: none;
+    float: left;
+    width: 205px;
+    margin-left: 25px;
+}
+
+/* Three columns, content right layout */
+
+.layout-3c-r #content {
+    float: right;
+    width: 520px;
+}
+
+.layout-3c-r #sidebar-primary,
+.layout-3c-r #sidebar-secondary {
+    clear: none;
+    float: left;
+    width: 205px;
+    margin-right: 25px;
+}
+
+/* Three columns, content centered layout */
+
+.layout-3c-c #content {
+    float: left;
+    margin-left: 230px;
+    width: 520px;
+}
+
+.layout-3c-c #sidebar-primary {
+    float: left;
+    margin-left: -750px;
+    width: 205px;
+}
+
+.layout-3c-c #sidebar-secondary {
+    float: right;
+    width: 205px;
+}
