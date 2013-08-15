@@ -883,8 +883,9 @@ img.wp-smiley {
     color: #666;
 }
 
-.comments-nav .prev, .comments-nav .next {
-    background: url('../retro-fitted/images/comments-nav.png') 0 0 no-repeat;
+.comments-nav .prev,
+.comments-nav .next {
+    background: url('images/comments-nav.png') 0 0 no-repeat;
     display: inline-block;
     margin: 0 0 0 10px;
     height: 29px;
