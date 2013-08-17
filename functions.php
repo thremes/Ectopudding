@@ -33,6 +33,9 @@ function ectopudding_theme_setup()
     // register and enqueue needed styles
     add_action('wp_enqueue_scripts', 'ectopudding_enqueue_styles');
 
+    // apply filter to the default theme settings
+    add_filter("{$prefix}_default_theme_settings", 'ectopudding_default_theme_settings');
+
     // example action
     // add_action( "{$prefix}_header", 'ectopudding_example_action' );
 
@@ -52,4 +55,15 @@ function ectopudding_enqueue_styles()
         'chunkfive-webfont',
         trailingslashit(get_stylesheet_directory_uri()) . 'css/chunkfive-webfont.css'
     );
+}
+
+/**
+ * Remove the [theme-link] short code from the footer content. It's not allowed two credit links within WP.org.
+ *
+ * @since 0.1.3
+ */
+function ectopudding_default_theme_settings($settings)
+{
+    $settings['footer_insert'] = '<p class="copyright">' . __('Copyright &#169; [the-year] [site-link].', 'ectopudding') . '</p>' . "\n\n" . '<p class="credit">' . __('Powered by [wp-link] and [child-link].', 'ectopudding') . '</p>';
+    return $settings;
 }
